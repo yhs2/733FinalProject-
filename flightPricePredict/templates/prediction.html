@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+<!--{% load crispy_forms_tags %}-->
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12 text-left">
+            <form action="" method="GET" autocomplete="off">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">AIRPORT CODE</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="AIRPORT CODE" name="AIRPORT_CODE">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">START DATE</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="START DATE" name="START_DATE">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">END DATE</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="END DATE" name="END_DATE">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">GRAPH NAME</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="GRAPH NAME" name="GRAPH_NAME">
+                  </div>
+                  <button type="submit" class="btn btn-primary">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        {% if iata_code %}
+        <h2>
+            {{iata_code}} delay analyze from {{start_date}} to {{end_date}}
+        </h2>
+        {% endif %}
+    </div>
+    <div class="row">
+            {% for img in img_list %}
+                <img src={{img.image.url}} alt="Girl in a jacket" width="1000" height="500">
+            {% endfor %}
+
+    </div>
+</div>
+
+
+{% endblock content %}
