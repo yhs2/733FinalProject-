@@ -1,16 +1,24 @@
 {% extends 'base.html'%}
 {% block content %}
+{% load static %}
+<header style="margin-top: 20px">
+    <p class="h1" style="text-align: center;">   Recommand user to business / Predict protential rating stars by user review
+    </p>
+    <hr>
+</header>
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-xs-12 align-self-center">
-            <img src="../img/flight_main.jpg" class="resize-image-text" alt="yelpIcon">
+            <img src="{% static 'img/flight_main.jpg' %}" class="resize-image-text" alt="yelpIcon">
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12 col-xs-12 text-left">
+            <h1>Description</h1>
             <p class="lead">
-                Description
+                We decide to undergo this project due to the above reasons. The aviation industry is a fast-growing industry, and many people do have concerned about the uncertainty of flight departure and arrival times. Also, it relates to the current pandemic.
             </p>
+
         </div>
     </div>
   </div>

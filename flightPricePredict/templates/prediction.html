@@ -1,28 +1,35 @@
 {% extends 'base.html'%}
 <!--{% load crispy_forms_tags %}-->
 {% block content %}
-
+<header style="margin-top: 20px">
+    <p class="h1" style="text-align: center;">   Delay Status for a specific airport within a given duration
+    </p>
+    <hr>
+</header>
 <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-xs-12 text-left">
             <form action="" method="GET" autocomplete="off">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">AIRPORT CODE</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="AIRPORT CODE" name="AIRPORT_CODE">
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">START DATE</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="START DATE" name="START_DATE">
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">END DATE</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="END DATE" name="END_DATE">
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">GRAPH NAME</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="GRAPH NAME" name="GRAPH_NAME">
-                  </div>
-                  <button type="submit" class="btn btn-primary">SUBMIT</button>
+                <div class="row">
+                    Please Enter Your Desired Search:
+                </div>
+                <div class="row">
+                      <div class="col">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="AIRPORT CODE" name="AIRPORT_CODE">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="START DATE" name="START_DATE">
+                      </div>
+                </div>
+                <div class="row">
+                      <div class="col">
+                        <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="END DATE" name="END_DATE">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="GRAPH NAME" name="GRAPH_NAME">
+                      </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">SUBMIT</button>
             </form>
         </div>
     </div>

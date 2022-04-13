@@ -2,7 +2,11 @@
 <!--{% load crispy_forms_tags %}-->
 {% load static %}
 {% block content %}
-
+<header style="margin-top: 20px">
+    <p class="h1" style="text-align: center;">   Feature Importance visualization
+    </p>
+    <hr>
+</header>
 <div class="container">
     <div class="row mx-md-n5"></div>
     <iframe src="{% static 'pages/delay_dewpt_arrival.html'%}" height=500 width=500 title="Iframe Example"></iframe>
